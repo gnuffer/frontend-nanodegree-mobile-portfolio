@@ -435,20 +435,24 @@ var resizePizzas = function(size) {
     }
   }
 
-  // Calls sizeSwitcher function and stores return value in variable newSize
+  // Calls the sizeSwitcher function and stores the return value in variable
+  // newSize
   var newSize = sizeSwitcher(size);
 
-  // Measures the width of the window and stores the result in variable windowwidth
+  // Measures the width of the window and stores the result in variable
+  // windowwidth
   var windowwidth = document.querySelector("#randomPizzas").offsetWidth;
 
   // Calculates the new width of a pizza container as a function of the
-  // (constant) width of the window (which is more efficient than calculating it
-  // as a function of the (variable) width of the container)
+  // (constant) width of the window (which is more efficient than calculating
+  // it as a function of the (variable) width of the container)
   var newWidth = newSize * windowwidth;
 
+  // Accesses the pizza containers before iterating through them.
   var randomPizzas = document.querySelectorAll(".randomPizzaContainer");
 
-  // Iterates through pizza elements on the page and changes their widths
+  // Iterates through the pizza containers and changes their widths
+  // to newWidth
   function changePizzaSizes(size) {
     for (var i = 0; i < randomPizzas.length; i++) {
       randomPizzas[i].style.width = newWidth + "px";
@@ -500,9 +504,12 @@ function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
-  var items = document.querySelectorAll('.mover');
+  var items = document.getElementsByClassName('mover');
+  
+  var topval = document.body.scrollTop / 1250;
+
   for (var i = 0; i < items.length; i++) {
-    var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
+    var phase = Math.sin(topval + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }
 
