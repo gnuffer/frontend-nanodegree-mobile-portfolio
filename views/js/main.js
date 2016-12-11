@@ -504,8 +504,6 @@ function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
-  var items = document.getElementsByClassName('mover');
-  
   var topval = document.body.scrollTop / 1250;
 
   var phases = [];
@@ -514,10 +512,12 @@ function updatePositions() {
     phases[i] = Math.sin(topval + i);
   }
 
-  for (var j = 0; j < items.length; j++) {
-    var phase = phases[j % 5];
+  var cachedLength = window.items.length;
+
+  for (i = 0; i < cachedLength; i++) {
+    var phase = phases[i % 5];
     var shiftwidth = 100 * phase;
-    items[j].style.transform = 'translateX(' + shiftwidth + 'px)';
+    window.items[i].style.transform = 'translateX(' + shiftwidth + 'px)';
   }
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
@@ -547,4 +547,5 @@ document.addEventListener('DOMContentLoaded', function() {
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
     document.getElementById("movingPizzas1").appendChild(elem);
   }
+  window.items = document.getElementsByClassName('mover');
 });
