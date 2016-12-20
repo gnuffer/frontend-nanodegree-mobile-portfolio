@@ -537,7 +537,14 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  for (var i = 0; i < 200; i++) {
+  var movingPizzas = document.getElementById("movingPizzas1");
+
+  // Calculates the number of sliding pizzas depending on viewport size.
+  var viewportHeight = window.innerHeight;
+  var viewportRows = Math.ceil(viewportHeight / 256);
+  var viewportPizzas = viewportRows * 8;
+
+  for (var i = 0; i < viewportPizzas; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
@@ -545,7 +552,8 @@ document.addEventListener('DOMContentLoaded', function() {
     elem.style.width = "73.333px";
     elem.style.left = (i % cols) * s + "px";
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
-    document.getElementById("movingPizzas1").appendChild(elem);
+    movingPizzas.appendChild(elem);
   }
   window.items = document.getElementsByClassName('mover');
+  updatePositions();
 });
