@@ -517,8 +517,7 @@ function updatePositions() {
 
   for (i = 0; i < cachedLength; i++) {
     var phase = phases[i % 5];
-    var shiftwidth = 100 * phase;
-    window.items[i].style.transform = 'translateX(' + shiftwidth + 'px)';
+    window.items[i].style.transform = 'translateX(' + (100 * phase) + 'px)';
   }
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
@@ -540,7 +539,7 @@ function onscroll() {
     animating = true;
   }
 }
-// runs updatePositions on scroll
+// Updates positions on scroll
 window.addEventListener('scroll', onscroll);
 
 // Generates the sliding pizzas when the page loads.
