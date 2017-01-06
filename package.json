@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:html": "html-minifier --input-dir ./src --output-dir ./dist --collapse-whitespace --file-ext html"
+    "build:html": "html-minifier --input-dir ./src --output-dir ./dist --collapse-whitespace --file-ext html",
+    "prefix:css": "postcss -u autoprefixer -r dist/css/*",
+    "minify:css": "csso src/css/style.css --output dist/css/style.css",
+    "build:css": "npm run prefix:css && npm run minify:css",
+    "build:all": "npm-run-all build:html build:css"
   },
   "repository": {
     "type": "git",
@@ -18,9 +22,11 @@
   "homepage": "https://github.com/gnuffer/frontend-nanodegree-mobile-portfolio#readme",
   "devDependencies": {
     "autoprefixer": "^6.6.1",
+    "csso": "^2.3.1",
     "html-minifier": "^3.2.3",
     "imagemin-cli": "^3.0.0",
     "npm-run-all": "^4.0.0",
+    "postcss-cli": "^2.6.0",
     "rimraf": "^2.5.4",
     "uglify-js": "^2.7.5"
   }
