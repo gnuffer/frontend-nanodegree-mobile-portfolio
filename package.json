@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:html": "html-minifier --input-dir ./src --output-dir ./dist --collapse-whitespace --file-ext html"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/gnuffer/frontend-nanodegree-mobile-portfolio/issues"
   },
-  "homepage": "https://github.com/gnuffer/frontend-nanodegree-mobile-portfolio#readme"
+  "homepage": "https://github.com/gnuffer/frontend-nanodegree-mobile-portfolio#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.6.1",
+    "html-minifier": "^3.2.3",
+    "imagemin-cli": "^3.0.0",
+    "npm-run-all": "^4.0.0",
+    "rimraf": "^2.5.4",
+    "uglify-js": "^2.7.5"
+  }
 }
