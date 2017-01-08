@@ -8,6 +8,8 @@
     "prefix:css": "postcss -u autoprefixer -r dist/css/*",
     "minify:css": "csso src/css/style.css --output dist/css/style.css",
     "build:css": "npm run prefix:css && npm run minify:css",
+    "minify:js": "uglifyjs src/js/perfmatters.js -m -c -o dist/js/perfmatters.js && uglifyjs src/views/js/main.js -m -c -o dist/views/js/main.js",
+    "build:js": "npm run minify:js",
     "build:all": "npm-run-all build:html build:css"
   },
   "repository": {
