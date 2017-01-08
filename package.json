@@ -10,7 +10,9 @@
     "build:css": "npm run prefix:css && npm run minify:css",
     "minify:js": "uglifyjs src/js/perfmatters.js -m -c -o dist/js/perfmatters.js && uglifyjs src/views/js/main.js -m -c -o dist/views/js/main.js",
     "build:js": "npm run minify:js",
-    "build:all": "npm-run-all build:html build:css"
+    "minify:img": "imagemin src/img/* --out-dir=dist/img",
+    "build:img": "npm run minify:img",
+    "build:all": "npm-run-all build:html build:css build:js build:img"
   },
   "repository": {
     "type": "git",
