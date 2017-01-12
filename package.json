@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "scripts": {
     "reset:html": "cp src/*.html dist",
     "reset:css": "cp src/css/* dist/css",
     "reset:js": "cp src/js/* dist/js",
