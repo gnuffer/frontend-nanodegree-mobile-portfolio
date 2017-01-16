@@ -40,7 +40,7 @@ Once you have installed the project locally, you can make it accessible remotely
     ```
     $ ngrok http 8080
     ```
-The project can now be accessed remotely at one of the URL's ngrok provides.
+7. Access the project remotely at one of the URL's ngrok provides.
 
 ## Directory Structure
 The project's root directory contains two subdirectories, src and dist, which contain the development files and the production files, respectively. The production index.html file is in the root directory, the developer version is called "srcindex.html" and is in the src directory. The package.json file in the root directory contains the npm scripts used as build tool. 
