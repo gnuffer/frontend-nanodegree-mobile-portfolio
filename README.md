@@ -14,9 +14,9 @@ Point your browser at [gnuffer.github.io/frontend-nanodegree-mobile-portfolio](g
 ### Locally
 1. Download [Git](https://git-scm.com/).  Instructions can be found [here](https://git-scm.com/downloads).
 2. Clone the repo:
-	    ``` bash
-	    $ git clone https://github.com/gnuffer/frontend-nanodegree-mobile-portfolio
-	    ```
+```
+$ git clone https://github.com/gnuffer/frontend-nanodegree-mobile-portfolio
+```
 3. Open index.html in your browser.
 
 ## Serving the Site
@@ -27,19 +27,19 @@ Once you have installed the project locally, you can make it accessible remotely
 2. Install [ngrok](https://ngrok.com/) to the top level of the project directory. 
 
 3. Set up a local server
-	    ```
-	    $ python -m SimpleHTTPServer 8080
-	    ```
+```
+$ python -m SimpleHTTPServer 8080
+```
 4. Open your browser and visit `localhost:8080`. 
 
 5. Go to the project directory
-	    ```
-	    $ cd /path/to/project-directory
-	    ```
+```
+$ cd /path/to/project-directory
+```
 6. Establish a secure tunnel
-	    ```
-	    $ ngrok http 8080
-	    ```
+```
+$ ngrok http 8080
+```
 7. Access the project remotely at one of the URL's ngrok provides.
 
 ## Directory Structure
@@ -51,21 +51,21 @@ To build the site on your own machine,
 1. Download [Node.js and npm](https://www.npmjs.com/get-npm)
 
 2. Navigate to the project directory
-	    ```
-	    $ cd /path/to/project-directory
-	    ```
+```
+$ cd /path/to/project-directory
+```
 3. Install package dependencies
-	    ```
-	    $ npm install
-	    ```
+```
+$ npm install
+```
 4. Return production files to their pre-build state 
-	    ``` 
-	    $ npm run reset:all
-	    ```
+```
+$ npm run reset:all
+```
 5. Build
-	    ```
-	    $ npm run build:all
-	    ```
+```
+$ npm run build:all
+```
 
 ## Optimizations to Ensure a Minimum [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) Score of 90 for index.html 
 ### Manual changes to index.html
