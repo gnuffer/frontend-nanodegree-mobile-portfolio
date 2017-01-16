@@ -9,7 +9,7 @@ This is Project 4 of Udacity's [Front-End Web Developer Nanodegree](https://www.
 You can view the site on [GitHub](https://github.com/) or locally on your own machine. 
 
 ### On GitHub
-Point your browser at [gnuffer.github.io/frontend-nanodegree-mobile-portfolio](gnuffer.github.io/frontend-nanodegree-mobile-portfolio).
+Point your browser at [https://gnuffer.github.io/frontend-nanodegree-mobile-portfolio/](https://gnuffer.github.io/frontend-nanodegree-mobile-portfolio/).
 
 ### Locally
 1. Download [Git](https://git-scm.com/).  Instructions can be found [here](https://git-scm.com/downloads).
